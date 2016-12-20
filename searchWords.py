@@ -6,16 +6,18 @@ import locale
 import time
 #定义常量
 countValue=2#显示阈值
-relateValue=0.1#显示阈值
+relateValue=0.05#显示阈值
+squareValue=0.05 #三次方的阈值设定
+subValue=5#子串独立性
 
 countIndex=0#list索引
 relateIndex=1#list索引
 squareIndex=2#list索引
 
-worldLen=6#词语最大长度
+wordLen=5#词语最大长度
 typeRelate=1#计算type
 typeSquare=2#计算type
-squareValue=0.05 #三次方的阈值设定
+
 
 #功能 ：分解出一个句子中可能的词语和个数
 #参数 ：句子str 读取句子的字数number
@@ -34,17 +36,34 @@ def sortByCount(dict):
     dict = collections.OrderedDict(sorted(dict.items(), key = lambda t: -t[1][0]))
     return dict
 
+#查询多字词组需要去重复的内容
+def findCheckList(str):
+    checkList=[]
+    for i in range(2, len(str)):
+        checkList.append(str[:i])
+        checkList.append(str[-i:])
+    return checkList
 
 # 查找重复包含的内容，相等则一定是包含用法
 def delSameKey(result):
     delList = []
-    for key1, value1 in result.items():
-        for key2, value2 in result.items():
-            if (key1 in key2) and (key2 not in key1) and (value1[countIndex] / value2[countIndex] >1.1):
-                delList.append(key1)
-
-    delList = list(set(delList))
+    for word in result:
+        #这里需要检查的词需要一定的词频，不然意义不大，也算是个计算优化。
+        if len(word) > 2 and result[word][countIndex] > countValue :
+            checkList=findCheckList(word)
+            #内部查询去重复
+            for subWord in checkList:
+                #如果有这个子串，并且子串使用频率在一个范围之内
+                if result.has_key(subWord):
+                    #这里用词频比用比例更好，一定的词频就一定能说明成词规律
+                    if result[subWord][countIndex] - result[word][countIndex] <= subValue:
+                        delList.append(subWord)
     # 删除多余
+    delList = list(set(delList))
+    #查看删除了哪些重复的东西
+    # for i in delList:
+    #     print i
+
     for name in delList:
         del result[name]
     return result
@@ -63,7 +82,7 @@ def cutArticle(txt):
     str = txt.encode("utf-8")
 
     # 根据符号分句
-    sentenceList = re.split('\！|\!|\+|\…|\·|\—|\〈|\〉|\；|\}|\{|\[|\]|\>|\<|\》|\《|\\\\|\||\=|\'|\"|\”|\“|\/|\：|:|\（|\）|\)|\(|\.|,|; |\，|\。|\、|\？|\*|\s+|\w+|\n', str)
+    sentenceList = re.split('\-|\%|\~|\ |\＋|\?|\　|\【|\’|\•|\‘|\！|\!|\+|\…|\·|\—|\〈|\〉|\；|\}|\{|\[|\]|\>|\<|\》|\《|\\\\|\||\=|\'|\"|\”|\“|\/|\：|:|\（|\）|\)|\(|\.|,|; |\，|\。|\、|\？|\*|\s+|\w+|\n', str)
     return sentenceList
 
 def analysisEngAndInt(txt,result):
@@ -121,6 +140,7 @@ result={}
 #打开文件
 fp = open("e:\content.txt",'r')
 txt=fp.read().decode("utf-8")
+
 #解析英文
 #result=analysisEngAndInt(txt,result)
 #拆分句子
@@ -129,13 +149,12 @@ sentenceList=cutArticle(txt)
 for sentence in sentenceList:
     sentence=sentence.decode("utf-8")
     #句子预处理，抽出其中的数字和英文
-    for wordNumber in range(1,worldLen):
+    for wordNumber in range(1,wordLen+1):
         result=analysisSentence(sentence,wordNumber,result)
+
 
 result = countScore(result,typeRelate)
 result = countScore(result,typeSquare)
-#delSameKey(result)
+delSameKey(result)
 result = sortByCount(result)
 show()
-
-print str(time.clock()-start)

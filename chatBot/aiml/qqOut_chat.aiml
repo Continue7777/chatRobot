@@ -1,0 +1,279 @@
+<aiml version="1.0.1" encoding="UTF-8"><category>
+
+<category>
+            <pattern>*泪*</pattern>
+            <template>
+                <random>
+<li>我喉咙好疼/泪奔/泪奔
+</li>
+<li>疼得我饭都不想吃了/泪奔
+</li>
+<li>/泪奔/泪奔/泪奔
+</li>
+<li>但是我鼻子堵了/泪奔
+</li>
+<li>毛豆/泪奔香瓜/泪奔
+</li>
+<li>有问题/泪奔
+</li>
+<li>五分钟做的选词填空/泪奔
+</li>
+                </random>
+            </template>
+        </category>
+
+<category>
+            <pattern>*奔*</pattern>
+            <template>
+                <random>
+<li>我喉咙好疼/泪奔/泪奔
+</li>
+<li>疼得我饭都不想吃了/泪奔
+</li>
+<li>/泪奔/泪奔/泪奔
+</li>
+<li>但是我鼻子堵了/泪奔
+</li>
+<li>毛豆/泪奔香瓜/泪奔
+</li>
+<li>有问题/泪奔
+</li>
+<li>五分钟做的选词填空/泪奔
+</li>
+                </random>
+            </template>
+        </category>
+
+<category>
+            <pattern>*室友*</pattern>
+            <template>
+                <random>
+<li>下次室友不在寝室录给你听
+</li>
+<li>我每次都是室友不在寝室的时候弹一会
+</li>
+<li>怕吵到室友了
+</li>
+<li>我室友说的
+</li>
+<li>我室友都出去玩了
+</li>
+<li>你每次是愿意一个人还是和室友一起啊
+</li>
+<li>我让我室友下学期来了教我弹几首歌
+</li>
+<li>我的室友都出去玩了
+</li>
+<li>我和我的室友都需要男朋友
+</li>
+                </random>
+            </template>
+        </category>
+
+<category>
+            <pattern>*表情*</pattern>
+            <template>
+                <random>
+<li>[表情][表情][表情]不告诉你
+</li>
+<li>[表情]我看到了
+</li>
+<li>我的墨镜不见了[表情][表情]
+</li>
+<li>商业分析[表情]
+</li>
+<li>[表情][表情]我也要睡了
+</li>
+<li>[表情]
+</li>
+<li>好香[表情]
+</li>
+<li>[表情][表情][表情]
+</li>
+<li>你今天都不跟我说生日快乐[表情]
+</li>
+                </random>
+            </template>
+        </category>
+
+<category>
+            <pattern>*沧桑*</pattern>
+            <template>
+                <random>
+<li>[沧桑]
+</li>
+<li>那我晚上去哪玩[沧桑]
+</li>
+<li>武汉啊[沧桑]
+</li>
+<li>[沧桑][沧桑][沧桑]
+</li>
+<li>[沧桑][沧桑]
+</li>
+                </random>
+            </template>
+        </category>
+
+<category>
+            <pattern>*感冒*</pattern>
+            <template>
+                <random>
+<li>感冒真的是一个循序渐进的过程
+</li>
+<li>我上次感冒还是开学的时候
+</li>
+<li>但是好久没感冒这样的话我再也不说了
+</li>
+<li>我昨天才说了我好久没感冒了
+</li>
+<li>我感冒了🙄
+</li>
+<li>你怎么又感冒了
+</li>
+<li>我这几天感冒了
+</li>
+<li>你又感冒了
+</li>
+<li>天天在感冒
+</li>
+<li>感冒了啊🙄
+</li>
+<li>我感冒都是扛过来的
+</li>
+                </random>
+            </template>
+        </category>
+
+<category>
+            <pattern>*寝室*</pattern>
+            <template>
+                <random>
+<li>但是我已经在寝室呆了一天了
+</li>
+<li>下次室友不在寝室录给你听
+</li>
+<li>我每次都是室友不在寝室的时候弹一会
+</li>
+<li>隔壁寝室的在我们寝室睡得好香
+</li>
+<li>2班有个男生寝室里五个人烫头之后都相继脱单了
+</li>
+<li>他说每天晚上在寝室他们五个全都在视频
+</li>
+<li>寝室门都关了
+</li>
+<li>寝室呆不下去了
+</li>
+                </random>
+            </template>
+        </category>
+
+<category>
+            <pattern>*考试*</pattern>
+            <template>
+                <random>
+<li>要考试了[图片]
+</li>
+<li>星期天还有考试
+</li>
+<li>今天考试了
+</li>
+<li>开卷考试啦
+</li>
+<li>明天还要考试
+</li>
+<li>我们星期一考试星期二考试星期三考试
+</li>
+<li>我前天考试的时候也觉得我线代白学了
+</li>
+<li>要考试了
+</li>
+<li>我们下个星期就要考试了
+</li>
+<li>我要去考试了
+</li>
+                </random>
+            </template>
+        </category>
+
+<category>
+            <pattern>*知道*</pattern>
+            <template>
+                <random>
+<li>不知道
+</li>
+<li>我知道了
+</li>
+<li>但是不知道怎么用
+</li>
+<li>我不知道什么好吃
+</li>
+<li>她啥都不知道
+</li>
+<li>我知道
+</li>
+<li>我不知道
+</li>
+<li>我已经不知道去哪了
+</li>
+                </random>
+            </template>
+        </category>
+
+<category>
+            <pattern>*时候*</pattern>
+            <template>
+                <random>
+<li>她说她小时候学钢琴
+</li>
+<li>我上次感冒还是开学的时候
+</li>
+<li>我在找检票口的时候
+</li>
+<li>我刚刚打开水的时候开水瓶子爆了
+</li>
+<li>我前天考试的时候也觉得我线代白学了
+</li>
+<li>我每次都是室友不在寝室的时候弹一会
+</li>
+<li>下车的时候给了他30
+</li>
+<li>我们高中的时候经常看
+</li>
+<li>我们刚刚来的时候太饿了才点这么多
+</li>
+<li>是时候考虑终身大事了
+</li>
+<li>我前几天弹生日快乐歌的时候老觉得音不准
+</li>
+<li>昨天晚上要睡觉的时候就有点疼
+</li>
+                </random>
+            </template>
+        </category>
+
+<category>
+            <pattern>*学习*</pattern>
+            <template>
+                <random>
+<li>我最近学习很有激情
+</li>
+<li>因为学习使你快来
+</li>
+<li>我最近没日没夜地学习
+</li>
+<li>我只好来图书馆学习
+</li>
+<li>一有空就学习
+</li>
+<li>学习
+</li>
+<li>我今天晚上休息一晚上不用学习
+</li>
+<li>毕竟我是爱学习的好孩子
+</li>
+                </random>
+            </template>
+        </category>
+
+</aiml>

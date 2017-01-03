@@ -1,0 +1,73 @@
+<!-- basic_chat.aiml -->
+<aiml version="1.0.1" encoding="UTF-8">
+
+<!-- include -->
+
+<!-- basic -->
+    <category>
+        <pattern>HELLO</pattern>
+        <template>
+            Well, hello!
+        </template>
+    </category>
+
+<!-- basic chinese -->
+    <category>
+        <pattern>你好*</pattern>
+        <template>
+            你好~！<get name="userName"/>
+        </template>
+    </category>
+
+<!-- think -->
+    <category>
+        <pattern>我叫*</pattern>
+        <template>
+            <think>
+                <set name="userName">
+                    <star/>
+                </set>
+            </think>
+            hello,<get name="userName"/>你好~！
+        </template>
+    </category>
+<!-- srai -->
+    <category>
+        <pattern>我是*</pattern>
+        <template>
+            <srai><star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>张凡宇</pattern>      
+        <template>
+            哦，你太有才了！
+        </template>
+    </category>
+
+<!-- input -->
+    <category>
+        <pattern>啊*</pattern>
+        <template>
+        你不是刚才说：“<input index="2"/>”？
+        </template>
+    </category>
+
+
+
+<!-- more -->
+    <category>
+        <pattern>*</pattern>
+        <template>
+            <random>
+                <li>你叫什么名字？</li>
+                <li> 嗯嗯 </li>
+                <li> 额 </li>
+                <li> 噢噢 </li>
+                <li> ^-^ </li>
+            </random>
+        </template>
+    </category>
+ 
+</aiml>
